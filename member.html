@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<link rel="stylesheet" href="CSS/log.css">
+<link data-n-head="ssr" rel="stylesheet"
+	href="//fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900|Raleway|Spartan:400,700,800&amp;display=swa">
+<script type="text/javascript" src="https://www.scmplayer.net/script.js"
+	data-config="{'skin':'skins/black/skin.css','volume':50,'autoplay':false,'shuffle':false,'repeat':2,'placement':'top','showplaylist':false,'playlist':[{'title':'Paris','url':'https://youtu.be/2_5eE-GTwdc'},{'title':'Calvin Harris - Feels (ft. Pharrell Williams, Katy Perry, Big Sean)','url':'https://youtu.be/qXW3CHpv9fc'},{'title':'Erik Frank - Paradise','url':'https://youtu.be/-5LkDnoPvH4'},{'title':'Erik Frank & Alex Parker - Secrets','url':'https://youtu.be/L8lyGxSGFDw'},{'title':'Jake Scott - Off','url':'https://youtu.be/Kz2MLCCdxsM'},{'title':'Maurice Moore - C%27est la vie','url':'https://youtu.be/i1cX04Kul6E'},{'title':'RILEY & Loote- Tell Me Why','url':'https://youtu.be/4g4940CoQso'}]}">
+	
+</script>
+<script>
+	function check() {
+		var m = document.member;
+		if (m.name.value == "") {
+			alert('이름을 입력하세요');
+			m.name.focus();
+			return false;
+		} else if (m.id.value == "") {
+			alert('아이디를 입력하세요');
+			m.id.focus();
+			return false;
+		} else if (m.id.value.length<6 || m.id.value.length>10) {
+			alert('아이디는 6~10자리입니다');
+			m.id.focus = "";
+			return false;
+		} else if (m.pw.value == "") {
+			alert('비밀번호를 입력하세요');
+			m.pw.focus = "";
+			return false;
+		} else if (m.pw.value.length < 6) {
+			alert('비밀번호는 6자리 이상입니다');
+			m.pw.focus = "";
+			return false;
+		} else if (m.cfpw.value == "") {
+			alert('비밀번호를 확인해주세요');
+			m.cfpw.focus = "";
+			return false;
+		} else if (m.pw.value != m.cfpw.value) {
+			alert('비밀번호가 일치하지 않습니다');
+			m.pw.focus = "";
+			return false;
+		} else if (m.email.value == "") {
+			alert('이메일을 입력하세요');
+			m.email.focus = "";
+			return false;
+		} else if (!m.email.value.includes('@') || !m.email.value.includes('.')) {
+			alert('이메일이 옳지 않습니다');
+			m.email.focus = "";
+			return false;
+		}
+		alert('환영합니다!');
+		m.submit();
+		return true;
+	}
+</script>
+<body>
+	<nav id="tMenu">
+		<ul>
+			<li><a class="mlink" href="ho4.html">STORY</a></li>
+			<li><a class="mlink" href="ho3.html">WORKS</a></li>
+			<li><a class="mlink" href="ho2.html">ABOUT</a></li>
+			<li><a class="mlink" href="ho1.html">HOME</a></li>
+		</ul>
+	</nav>
+	<section>
+		<form action="login.html" method="post" name="member">
+			<table>
+				<tr>
+					<th width="480"><h1 id="title1">Join Membership</h1></th>
+				</tr>
+			</table>
+			<table id="mem">
+				<tr>
+					<td width="180"><span id="mem">Name</span></td>
+					<td width="300"><input name="name" type="text"
+						style="width: 95%"></td>
+				</tr>
+				<tr>
+					<td><span id="mem">ID</span></td>
+					<td><input name="id" type="text" style="width: 95%"
+						onkeyup="this.value=this.value.replace(/[^a-z0-9]/g,'');"></td>
+				</tr>
+				<tr>
+					<td><span id="mem">Password</span></td>
+					<td><input name="pw" type="password" style="width: 95%"></td>
+				</tr>
+				<tr>
+					<td><span id="mem">Confirm Password</span></td>
+					<td><input name="cfpw" type="password" style="width: 95%"></td>
+				</tr>
+				<tr>
+					<td><span id="mem">Select gender</span></td>
+					<td><input type="radio" name="gender"><span id="mem">Male</span><input
+						type="radio" name="gender"><span id="mem">Female</span>
+				<tr>
+					<td><span id="mem">Birthday</span></td>
+					<td><input type="date" style="width: 95%"></td>
+				</tr>
+				<tr>
+					<td><span id="mem">E-mail</span></td>
+					<td><input name="email" type="text" style="width: 95%"
+						onkeyup="this.value=this.value.replace(/[^a-zA-Z0-9@.]/g,'');"></td>
+				</tr>
+				<tr>
+					<td colspan="2" style="text-align: right"><input type="button"
+						id="membtn" value="Join!" onclick="check()"></td>
+				</tr>
+			</table>
+		</form>
+	</section>
+</body>
+</html>

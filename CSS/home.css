@@ -1,0 +1,67 @@
+@charset "EUC-KR";
+body {
+	display: grid;
+}
+body::after {
+	width: 100%;
+	height: 100%;
+	content: "";
+	background-size: cover;
+	background-image: url("../img/main.jpg");
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	opacity: 0.9;
+}
+nav#tMenu {
+	margin-top: 50px;
+	margin-left: auto;
+	background-color: rgba(0, 0, 0, 0.6);
+	height: 50px;
+	width: 600px;
+}
+#tMenu ul {
+	margin: 0;
+	padding: 0;
+}
+#tMenu ul li {
+	display: inline-block;
+	list-style: none;
+	float: right;
+	line-height: 40px;
+	vertical-align: middle;
+	text-align: center;
+}
+#tMenu .mlink {
+	text-decoration: none;
+	color: #ffffff;
+	display: block;
+	width: 150px;
+	font-size: 20px;
+	font-weight: bold;
+	opacity: 70%;
+	font-family: "Raleway", sans-serif;
+	transform: scale(1, 1);
+	transition: opacity;
+}
+#tMenu .mlink:hover {
+	transform: scale(1.2, 1.2);
+	opacity: 100%;
+	transition: .5s;
+}
+section {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	align-items: center;
+	justify-content: center;
+}
+h1#title {
+	font: 100px "Spartan", sans-serif;
+	font-weight: 800;
+	line-height: 150px;
+	text-align: center;
+	color: #ffffff;
+}

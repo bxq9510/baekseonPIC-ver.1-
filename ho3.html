@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<link rel="stylesheet" href="CSS/contents.css">
+<link data-n-head="ssr" rel="stylesheet"
+	href="//fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900|Raleway|Spartan:400,700,800&amp;display=swa">
+<script type="text/javascript" src="https://www.scmplayer.net/script.js"
+	data-config="{'skin':'skins/black/skin.css','volume':50,'autoplay':false,'shuffle':false,'repeat':2,'placement':'top','showplaylist':false,'playlist':[{'title':'Paris','url':'https://youtu.be/2_5eE-GTwdc'},{'title':'Calvin Harris - Feels (ft. Pharrell Williams, Katy Perry, Big Sean)','url':'https://youtu.be/qXW3CHpv9fc'},{'title':'Erik Frank - Paradise','url':'https://youtu.be/-5LkDnoPvH4'},{'title':'Erik Frank & Alex Parker - Secrets','url':'https://youtu.be/L8lyGxSGFDw'},{'title':'Jake Scott - Off','url':'https://youtu.be/Kz2MLCCdxsM'},{'title':'Maurice Moore - C%27est la vie','url':'https://youtu.be/i1cX04Kul6E'},{'title':'RILEY & Loote- Tell Me Why','url':'https://youtu.be/4g4940CoQso'}]}">
+	
+</script>
+<style>
+body {
+	display: grid;
+}
+
+body::after {
+	width: 100%;
+	height: 100%;
+	content: "";
+	background-size: cover;
+	background-image: url("img/main7.jpg");
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	opacity: 0.9;
+}
+
+img#work {
+	margin: 15px;
+	width: 300px;
+	height: 200px;
+	box-shadow: 0 20px 50px rgb(0, 0, 0);
+}
+table#wrk {
+	margin-top: 10%;
+}
+</style>
+<script>
+	function init() {
+		var p = document.getElementById("work");
+		p.onmouseover = function() {
+			this.style.backgroundColor = "white";
+		};
+		p.addEventListener("mouseout", function() {
+			this.style.backgroundColor = "white";
+		} // 익명 함수
+		);
+	}
+</script>
+<body>
+	<header>
+		<a class="tlink" href="ho1.html"><img src="img/logo.png"
+			width="150"></a>
+	</header>
+	<nav id="tMenu">
+		<ul>
+			<li><a class="mlink" href="https://popcat.click/"
+				target="_blank">POPCAT</a></li>
+			<li><a class="mlink" href="ho4.html">STORY</a></li>
+			<li><a class="mlink" href="ho3.html">WORKS</a></li>
+			<li><a class="mlink" href="ho2.html">ABOUT</a></li>
+		</ul>
+	</nav>
+	<nav id="sMenu">
+		<table>
+			<tr>
+				<th>
+					<h1 id="title2">WORKS</h1>
+					<ul>
+						<li><a class="slink" href="ho3.html">#1</a><br></li>
+						<li><a class="slink" href="#">#2</a><br></li>
+						<li><a class="slink" href="#">#3</a><br></li>
+						<li><a class="slink" href="#">#4</a><br></li>
+					</ul>
+				</th>
+			</tr>
+		</table>
+	</nav>
+	<section>
+		<h1 id="title1">#1</h1>
+		<table id="wrk" border="1">
+			<tr>
+				<td><img id="work" src="img/surf.jpg"><img id="work"
+					src="img/main6.jpg"><img id="work" src="img/main8.jpg"></td>
+			</tr>
+		</table>
+	</section>
+</body>
+</html>

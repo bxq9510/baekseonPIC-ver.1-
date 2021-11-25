@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>BAEKSEON</title>
+</head>
+<style>
+body {
+	display: grid;
+	justify-content: center;
+	align-items: center;
+}
+ body::after {
+	width: 100%;
+	height: 100%;
+	content: "";
+	background-size: contain;
+	background-image: url("gif/heart2.gif");
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+section {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -60%);
+}
+h1 {
+	font: 100px "Sketch 3D", sans-serif;
+	font-weight: 800;
+	line-height: 90px;
+	text-align: center;
+}
+div {
+	display: inline-block;
+	width: 100px;
+	height: 20px;
+	font: 50px "Dongle", sans-serif;
+	text-align: center;
+	color: black;
+}
+div#scale {
+	transform: scale(1, 1);
+}
+div#scale:hover {
+	transform: scale(1.2, 1.2);
+}
+</style>
+<body>
+	<section>
+		<h1>
+			BAEKSEON's <br>PIC.
+		</h1>
+			<img src="img/main.jpg" width="800" height="400" border="5"><br><br>
+			<a href="home2.html"><div id=scale>INFO</div></a>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+			<a href="home3.html"><div id=scale>DIARY</div></a>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+			<a href="home4.html"><div id=scale>STORY</div></a>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+			<a href="https://popcat.click/" target="_blank"><div id=scale>POPCAT</div></a>
+	</section>
+</body>
+</html>

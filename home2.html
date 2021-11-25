@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<style>
+body {
+	display: grid;
+	justify-content: center;
+	align-items: center;}
+body::after {
+	width: 100%;
+	height: 100%;
+	content: "";
+	background-size: inherit;
+	background-image: url("gif/bubble.gif");
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;}
+section {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -60%);}
+h1 {
+	font: 80px "Sketch 3D", sans-serif;
+	font-weight: 800;
+	line-height: 90px;
+	text-align: center;}
+strong{
+	font: 40px "Dongle", sans-serif;
+	font-weight: 400;
+	line-height: 40px;
+	text-align: center;}
+div {
+	display: inline-block;
+	width: 100px;
+	height: 20px;
+	font: 50px "Dongle", sans-serif;
+	text-align: center;
+	color: black;}
+div#scale {
+	transform: scale(1, 1);}
+div#scale:hover {
+	transform: scale(1.1, 1.1);}
+</style>
+<body>
+	<section>
+		<h1>Information</h1><br><br>
+		<table width="800">
+			<tr>
+				<th><img src="img/profile.jpg" width="300" height="300" radius="100"></th>
+				<td>
+				<strong>Yoon Baekseon</strong>
+				<ul>
+				<li><strong>Age. </strong> 26</li>
+				<li><strong>Hobby. </strong>Traveling, Music, Movie</li>
+				<li><strong>Tell. </strong> 010-1234-5678</li>
+				<li><strong>E-mail. </strong> baekseon@gmail.com</li>
+				<li><strong>Address. </strong> Suwon, Gyeonggi-do, Republic of Korea</li>
+				</ul>
+				</td> </tr>
+		</table><br><br>
+			<a href="home1.html"><div id=scale>HOME</div></a>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+			<a href="home3.html"><div id=scale>DIARY</div></a>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+			<a href="home4.html"><div id=scale>STORY</div></a>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+			<a href="https://popcat.click/" target="_blank"><div id=scale>POPCAT</div></a>
+	</section>
+</body>
+</html>
